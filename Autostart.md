@@ -2,9 +2,9 @@ Guide for Auto-Starting Something in Linux
 
 ---
 
-## ✅ Full `rc.local` Setup for `FILE.py`
+##  Full `rc.local` Setup for `FILE.py`
 
-### 🔹 Step 1: Check or Create `/etc/rc.local`
+###  Step 1: Check or Create `/etc/rc.local`
 
 #### If it **doesn't exist**, create it:
 
@@ -25,7 +25,7 @@ exit 0
 
 ---
 
-### 🔹 Step 2: Make it executable
+###  Step 2: Make it executable
 
 ```bash
 sudo chmod +x /etc/rc.local
@@ -33,7 +33,7 @@ sudo chmod +x /etc/rc.local
 
 ---
 
-### 🔹 Step 3: Create the systemd service for `rc.local`
+###  Step 3: Create the systemd service for `rc.local`
 
 If it doesn't already exist, create:
 
@@ -62,7 +62,7 @@ WantedBy=multi-user.target
 
 ---
 
-### 🔹 Step 4: Enable the service
+###  Step 4: Enable the service
 
 ```bash
 sudo systemctl enable rc-local
@@ -71,7 +71,7 @@ sudo systemctl start rc-local
 
 ---
 
-### 🔹 Step 5: Reboot and test
+###  Step 5: Reboot and test
 
 ```bash
 sudo reboot
@@ -81,7 +81,7 @@ After booting, your `FILE.py` script should run automatically.
 
 ---
 
-### ✅ Optional: Debug tip
+###  Optional: Debug tip
 
 If it's not working:
 
