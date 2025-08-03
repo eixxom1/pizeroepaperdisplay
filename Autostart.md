@@ -1,6 +1,6 @@
 Guide for Auto-Starting Something in Linux
 
----
+
 
 ##  Full `rc.local` Setup for `FILE.py`
 
@@ -23,7 +23,7 @@ exit 0
 
 > Replace `/usr/bin/python` with the exact path if needed (check with `which python`).
 
----
+
 
 ###  Step 2: Make it executable
 
@@ -31,7 +31,7 @@ exit 0
 sudo chmod +x /etc/rc.local
 ```
 
----
+
 
 ###  Step 3: Create the systemd service for `rc.local`
 
@@ -60,7 +60,7 @@ GuessMainPID=no
 WantedBy=multi-user.target
 ```
 
----
+
 
 ###  Step 4: Enable the service
 
@@ -69,7 +69,7 @@ sudo systemctl enable rc-local
 sudo systemctl start rc-local
 ```
 
----
+
 
 ###  Step 5: Reboot and test
 
@@ -79,7 +79,7 @@ sudo reboot
 
 After booting, your `FILE.py` script should run automatically.
 
----
+
 
 ###  Optional: Debug tip
 
@@ -100,6 +100,6 @@ If it's not working:
 
 This logs output and errors to `c`.
 
----
+
 
 You have to rename ``` /home/YOUR-DIRECTORY-TO-THE-FILE.PY/ ``` to the name of your File, and ``` /tmp/YOUR-LOG-NAME.log ``` to the Name you want your Log to be.
