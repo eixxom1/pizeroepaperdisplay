@@ -100,6 +100,39 @@ If it's not working:
 
 This logs output and errors to `c`.
 
+###  Tips
+
+
+  Start the Service Immediatly
+  ```bash  	
+sudo systemctl start rc-local
+  ```
+
+  Stops the Service 
+  ```bash  	
+sudo systemctl stop rc-local
+  ```
+
+  Restarts the Service 
+  ```bash  	
+sudo systemctl restart rc-local
+  ```
+
+  Enables the Service at Boot
+  ```bash  	
+sudo systemctl enable rc-local
+  ```
+ (i have no idea why enable is blue)
+ 
+  Disables the Service at Boot
+  ```bash  	
+sudo systemctl disable rc-local
+  ```
+
+  Status of the Service
+  ```bash  	
+sudo systemctl status rc-local
+  ```
 
 
 You have to rename ``` /home/YOUR-DIRECTORY-TO-THE-FILE.PY/ ``` to the name of your File, and ``` /tmp/YOUR-LOG-NAME.log ``` to the Name you want your Log to be.
